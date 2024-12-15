@@ -28,11 +28,9 @@ export default function Portfolio() {
   ];
 
   function socialIcon(social: string): JSX.Element {
-    const source = `https://cdn.simpleicons.org/${social}/gray`
-    const size = "16"
-    return (
-      <img height={size} width={size} src={source} />
-    );
+    const source = `https://cdn.simpleicons.org/${social}/gray`;
+    const size = "16";
+    return <img height={size} width={size} src={source} />;
   }
 
   return (
