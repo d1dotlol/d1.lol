@@ -19,7 +19,7 @@ export default function Portfolio() {
     {
       name: "d1.lol",
       description: "Here",
-      links: [{ url: "https:github.com/d1dotlol/d1.lol", text: "GitHub" }],
+      links: [{ url: "https://www.github.com/d1dotlol/d1.lol", text: "GitHub" }],
     },
   ];
 
