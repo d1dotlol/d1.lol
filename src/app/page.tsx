@@ -68,7 +68,7 @@ export default function Portfolio() {
                   <TableCell>
                     {project.links.map((link) => (
                       <Link key={link.url} href={link.url}>
-                        {link.text}
+                        {socialIcon(link.text)}
                       </Link>
                     ))}
                   </TableCell>
