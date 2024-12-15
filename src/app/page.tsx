@@ -14,6 +14,7 @@ export default function Portfolio() {
     { name: "GitHub", url: "https://github.com/d1dotlol" },
     { name: "YouTube", url: "https://www.youtube.com/@d1dotlol" },
     { name: "X", url: "https://x.com/d1dotlol" },
+    { name: "Twitch", url: "https://twitch.tv/d1dotlol" },
   ];
 
   const projects = [
