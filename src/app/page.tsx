@@ -45,7 +45,7 @@ export default function Portfolio() {
           </ul>
         </nav>
 
-        <main>
+        <main className="text-center">
           <Table>
             <TableHeader>
               <TableRow>
