@@ -7,6 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { JSX } from "react";
 
 export default function Portfolio() {
   const socialLinks = [
@@ -18,10 +19,20 @@ export default function Portfolio() {
   const projects = [
     {
       name: "d1.lol",
-      description: "Here",
-      links: [{ url: "https://www.github.com/d1dotlol/d1.lol", text: "GitHub" }],
+      description: "this website",
+      links: [
+        { url: "https://www.github.com/d1dotlol/d1.lol", text: "GitHub" },
+      ],
     },
   ];
+
+  function socialIcon(social: string): JSX.Element {
+    const source = `https://cdn.simpleicons.org/${social}/gray`
+    const size = "16"
+    return (
+      <img height={size} width={size} src={source} />
+    );
+  }
 
   return (
     <div className="bg-background py-12 px-4 sm:px-6 lg:px-8">
@@ -30,22 +41,17 @@ export default function Portfolio() {
           <h1 className="text-4xl font-bold text-foreground mb-2">Dan</h1>
           <p className="text-xl text-muted-foreground">(Dan1, D1)</p>
         </header>
-
-        <nav className="mb-4">
-          <ul className="flex justify-center space-x-6">
+        <nav className="text-center mb-4">
+          <ul className="flex justify-evenly">
             {socialLinks.map((link) => (
               <li key={link.name}>
-                <Link
-                  href={link.url}
-                >
-                  {link.name}
-                </Link>
+                <Link href={link.url}>{socialIcon(link.name)}</Link>
               </li>
             ))}
           </ul>
         </nav>
 
-        <main className="text-center">
+        <main>
           <Table>
             <TableHeader>
               <TableRow>
@@ -61,10 +67,7 @@ export default function Portfolio() {
                   <TableCell>{project.description}</TableCell>
                   <TableCell>
                     {project.links.map((link) => (
-                      <Link
-                        key={link.url}
-                        href={link.url}
-                      >
+                      <Link key={link.url} href={link.url}>
                         {link.text}
                       </Link>
                     ))}
